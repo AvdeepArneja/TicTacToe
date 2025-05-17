@@ -8,7 +8,11 @@ function App() {
 
   return (
     <>
-      <div className='flex justify-center items-center mt-10'>
+      
+      <div className='flex flex-col justify-center items-center mt-10'>
+        <div className='mb-10'>
+          <h1 className='font-bold text-7xl text-cyan-500'>Tic Tac Toe</h1>
+        </div>
        <Board/>
       </div>
       
