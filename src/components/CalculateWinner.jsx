@@ -20,4 +20,5 @@ export function CalculateWinner(squares){
             return squares[a];
         }
     }
+
 }

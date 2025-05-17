@@ -19,9 +19,10 @@ export function Board() {
     setSquares(newSquare);
     setIsXTurn(!isXTurn);
   }
+  const isDraw = !winner && squares.every(square => square !== null);
 
   return (
-    <div className="flex flex-col items-center justify-center mt-6">
+    <div className="flex flex-col items-center justify-center mt-6 gap-5">
       <div className="w-[320px] h-[300px] gap-2 flex flex-wrap">
         {squares.map((square, index) => (
           <button
@@ -39,6 +40,22 @@ export function Board() {
           Winner: {winner === "X" ? "Player 1 Wins" : "Player 2 Wins"}
         </h2>
       )}
+      {isDraw && (
+        <h2 className="mt-4 text-yellow-400 text-xl font-semibold">
+          It's a Draw!
+        </h2>
+      )}
+   
+    <button
+  onClick={() => {
+    setSquares(Array(9).fill(null));
+    setIsXTurn(true);
+  }}
+  className="mt-4 px-6 py-2 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition duration-200"
+>
+  Reset Game
+</button>
     </div>
+  
   );
 }
