@@ -42,7 +42,7 @@ export function Board() {
       )}
       {isDraw && (
         <h2 className="mt-4 text-yellow-400 text-xl font-semibold">
-          It's a Draw!
+        And the long War ends in a Draw!
         </h2>
       )}
    
